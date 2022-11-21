@@ -1,0 +1,54 @@
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $container-width - 1px) {
+    @content;
+  }
+}
+
+
+@mixin tablet {
+  @media (max-width: $desktop-width - 1px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $tablet-width - 1px) {
+    @content;
+  }
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin hide-scroll {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin transition($args...) {
+  transition-timing-function: ease-out;
+  transition-duration: 0.2s;
+  transition-property: $args;
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin word-break {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}

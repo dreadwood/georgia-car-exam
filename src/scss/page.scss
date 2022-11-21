@@ -1,0 +1,46 @@
+.page {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+  @include mobile {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.page__header {
+  margin-bottom: 30px;
+}
+
+.page__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 700;
+  text-align: center;
+  color: $color-gray-330;
+  text-shadow: 2px 1px 0 $color-white, -2px 1px 0 $color-white;
+}
+
+.page__subtitle {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 16px;
+  text-align: center;
+  color: $color-gray-690;
+}
+
+.page__list {
+  @include list-reset;
+}
+
+.page__card {
+  &:not(:first-child) {
+    padding-top: 20px;
+  }
+  &:not(:last-child) {
+    padding-bottom: 20px;
+    border-bottom: 1px dashed $color-gray-670;
+  }
+}
