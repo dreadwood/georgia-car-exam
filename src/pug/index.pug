@@ -1,5 +1,5 @@
 
-include ./data.pug
+//- include ./data.pug
 
 - var lang = "ru"
 
@@ -10,7 +10,6 @@ html(lang=lang)
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="../scss/style.scss")
-    //- TODO: change font
     link(href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet")
     link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&display=swap" rel="stylesheet")
     title Document
@@ -19,34 +18,7 @@ html(lang=lang)
       h1 Georgia exam
       .page__header
         h2.page__title Экоменеджмент (ეკო-მართვა)
-        p.page__subtitle 51 билет, страница 1 (სულ 51 ბილეთი, გვერდი 1)
-
-      mixin oldCard(data)
-        article.ticket-container.locale-ru.hovering.ticket-container-small.cutoff-3.big-answers
-          .t-num #1742
-          .t-question
-            p.t-question-inner
-              span.text-wrap(style="font-size: 17px;") რა უნდა გვახსოვდეს მავნე ნივთიერებებისგან გარემოს დასაცავად?
-          .t-cover.answers-num-3
-            p.t-answer.t-answer-1(data-is-correct-list="true")
-              span.t-answer-inner
-                span.t-a-num
-                  span 1
-                span.t-a-text
-                  span.text-wrap(style="font-size: 15px;") უნდა მოვერიდოთ სატრანსპორტო საშუალების დგომას ჩართული ძრავით
-            p.t-answer.t-answer-2
-              span.t-answer-inner
-                span.t-a-num
-                  span 2
-                span.t-a-text
-                  span.text-wrap(style="font-size: 15px;") მოძრაობის დროის შესამცირებლად სატრანსპორტო საშუალება უნდა ვმართოთ ინტენსიური აჩქარებით და მკვეთრად დამუხრუჭებით
-            p.t-answer.t-answer-3
-              span.t-answer-inner
-                span.t-a-num
-                  span 3
-                span.t-a-text
-                  span.text-wrap(style="font-size: 15px;") სატრანსპორტო საშუალება უნდა ვმართოთ ძრავის ბრუნვის მაღალი სიჩქარით
-            p.t-answer.t-answer-4.ans-empty
+        p.page__subtitle 51 билет (სულ 51 ბილეთი)
 
       mixin card(dataCard = {})
         article.card

@@ -2,6 +2,7 @@
   "scripts": {
     "start": "parcel src/pug/index.pug",
     "test": "npm run stylelint && npm run eslint",
+    "check-data": "node src/data/data.test.js",
     "stylelint": "stylelint src/scss/**/*.scss",
     "stylelint:fix": "stylelint src/scss/**/*.scss --fix",
     "eslint": "eslint --ext .ts src/ts",
