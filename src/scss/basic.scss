@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-// html {
-//   height: 100%;
-// }
+html {
+  height: 100%;
+}
 
 body {
   position: relative;
@@ -23,6 +23,7 @@ body {
   font-style: normal;
   text-align: left;
   color: $color-black;
+  word-break: break-word;
   background-color: $color-white;
 }
 

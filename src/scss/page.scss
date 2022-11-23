@@ -1,7 +1,8 @@
 .page {
+  max-width: 750px;
   margin-right: auto;
   margin-left: auto;
-  padding: 20px;
+  padding: 40px 20px;
   @include mobile {
     padding-right: 10px;
     padding-left: 10px;
@@ -10,6 +11,8 @@
 
 .page__header {
   margin-bottom: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .page__title {
@@ -21,12 +24,14 @@
   text-align: center;
   color: $color-gray-330;
   text-shadow: 2px 1px 0 $color-white, -2px 1px 0 $color-white;
+  @include mobile {
+    font-size: 26px;
+  }
 }
 
 .page__subtitle {
   margin-top: 5px;
   margin-bottom: 0;
-  font-size: 16px;
   text-align: center;
   color: $color-gray-690;
 }
@@ -42,5 +47,23 @@
   &:not(:last-child) {
     padding-bottom: 20px;
     border-bottom: 1px dashed $color-gray-670;
+  }
+}
+
+.page__bottom {
+  margin-top: 36px;
+  margin-bottom: 0;
+  padding-top: 16px;
+  border-top: 1px solid $color-item2;
+}
+
+.page__bottom-text {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  color: $color-gray-670;
+  a {
+    color: $color-gray-330;
+    text-decoration: underline;
   }
 }

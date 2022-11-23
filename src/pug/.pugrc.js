@@ -4,5 +4,6 @@ module.exports = {
   locals: {
     cards,
     lang: 'ru',
+    github: 'https://github.com/dreadwood/georgia-auto-exam',
   },
 };

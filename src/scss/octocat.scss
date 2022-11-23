@@ -1,0 +1,40 @@
+.octocat {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  text-decoration: none;
+  border-bottom: 0;
+  svg {
+    width: 80px;
+    height: 80px;
+    color: $color-white;
+    fill: $color-item1;
+  }
+  &:hover .octocat__arm,
+  &:focus .octocat__arm {
+    animation: octocat-wave 0.56s ease-in-out;
+  }
+  @include mobile {
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}

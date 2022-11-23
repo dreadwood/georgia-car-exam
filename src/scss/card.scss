@@ -1,17 +1,18 @@
 .card {
   position: relative;
-  max-width: 750px;
   min-height: 500px;
   font-size: 16px;
   line-height: 1.5;
   color: $color-white;
   background-color: #093253;
-  background-image: linear-gradient(to right, #244e5b 0%, #031d26 50%, #244e5b 100%);
-  // TODO: 2022-11-21 / fix
-  &--disabled .card__answer {
-    &:not(.card__answer--select) {
-      background-color: transparent;
-    }
+  background-image: linear-gradient(to right, $color-item1 0%, $color-item3 50%, $color-item1 100%);
+  &:not(.card--disabled) .card__answer:hover,
+  &:not(.card--disabled) .card__answer:focus {
+    background-color: #1c3e48;
+    cursor: pointer;
+  }
+  @include mobile {
+    min-height: auto;
   }
 }
 
@@ -27,7 +28,11 @@
   color: $color-white;
   background-color: transparentize($color-black, 0.6);
   cursor: default;
+  @include mobile {
+    padding: 6px;
+  }
 }
+
 
 .card__question {
   display: flex;
@@ -57,7 +62,7 @@
   width: 50%;
   min-height: 170px;
   margin: 0;
-  padding: 5px 20px;
+  padding: 12px 20px;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -65,6 +70,7 @@
   color: inherit;
   background-color: transparent;
   border: none;
+  cursor: default;
   &:nth-of-type(1) {
     border-right: 2px solid $color-white;
     border-bottom: 2px solid $color-white;
@@ -75,13 +81,8 @@
   &:nth-of-type(3) {
     border-right: 2px solid $color-white;
   }
-  &:not(.card__answer--select):hover,
-  &:not(.card__answer--select):focus {
-    background-color: #1c3e48;
-  }
   &--select {
     background-color: $color-red;
-    cursor: default;
     .card__answer-num {
       display: none;
     }
@@ -107,6 +108,7 @@
   @include mobile {
     width: 100%;
     min-height: 120px;
+    padding: 16px;
     &:nth-of-type(1),
     &:nth-of-type(2),
     &:nth-of-type(3) {
@@ -137,5 +139,5 @@
 
 .card__text {
   margin-left: 20px;
-  text-shadow: 0 0 2px #180000;
+  text-shadow: 0 0 2px $color-item4;
 }
