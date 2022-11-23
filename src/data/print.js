@@ -15,4 +15,4 @@ function printQuestions(questions, begin = 1, end = questions.lenght) {
   );
 }
 
-printQuestions(cards, 1, 10);
+printQuestions(cards);
